@@ -506,6 +506,10 @@ int main(int argc, char **argv)
         die("startupGUItasks failed");
 
     grabAllKeys(true);
+
+    // just check if possible to grab Prev/Next keys
+    grabNextPrevKeys(true);
+    grabNextPrevKeys(false);
     g.uiShowHasRun = false;
 
     struct timespec nanots;

@@ -543,7 +543,7 @@ int main(int argc, char **argv)
             msg(1, "Press %lx: %d-%d\n",
                 ev.xkey.window, ev.xkey.state, ev.xkey.keycode);
             if (!((ev.xkey.state & g.option_modMask)
-                  && ev.xkey.keycode == g.option_keyCode)) {
+                  && ((ev.xkey.keycode == g.option_keyCode) || (ev.xkey.keycode == g.option_prevCode) || (ev.xkey.keycode == g.option_nextCode)))) {
                 break;
             }                   // safety redundance
             if (!g.uiShowHasRun) {

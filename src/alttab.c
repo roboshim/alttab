@@ -549,9 +549,13 @@ int main(int argc, char **argv)
             if (!g.uiShowHasRun) {
                 uiShow((ev.xkey.state & g.option_backMask));
             } else {
-                if (ev.xkey.state & g.option_backMask) {
+                if ((ev.xkey.state & g.option_backMask) && (ev.xkey.keycode == g.option_keyCode)) {
                     uiPrevWindow();
-                } else {
+                } else if (!(ev.xkey.state & g.option_backMask) && (ev.xkey.keycode == g.option_keyCode))) {
+                    uiNextWindow();
+                } else if (!(ev.xkey.state & g.option_backMask) && (ev.xkey.keycode == g.option_prevCode))) {
+                    uiPrevWindow();
+                } else if (!(ev.xkey.state & g.option_backMask) && (ev.xkey.keycode == g.option_nextCode)) {
                     uiNextWindow();
                 }
             }

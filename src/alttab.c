@@ -256,6 +256,16 @@ int use_args_and_xrm(int *argc, char **argv)
         die("%s\n", errmsg);
     KC = ksi != 0 ? ksi : XKeysymToKeycode(dpy, DEFKEYKS);
 
+    ksi = ksym_option_to_keycode(&db, XRMAPPNAME, "prevkey", &errmsg);
+    if (ksi == -1)
+        die("%s\n", errmsg);
+    PKC = ksi != 0 ? ksi : XKeysymToKeycode(dpy, DEFPREVKS);
+
+    ksi = ksym_option_to_keycode(&db, XRMAPPNAME, "nextkey", &errmsg);
+    if (ksi == -1)
+        die("%s\n", errmsg);
+    NKC = ksi != 0 ? ksi : XKeysymToKeycode(dpy, DEFNEXTKS);
+
     switch (xresource_load_int(&db, XRMAPPNAME, "modifier.mask", &(GMM))) {
     case 1:
         msg(-1,

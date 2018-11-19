@@ -114,6 +114,20 @@ Most command line options have corresponding X resource, see doc/alttab.ad for e
     Keysym of main key.
     For example, grave (aka tilde), Escape.
 
+  * `-pk` <str>:
+    resource: alttab.prevkey.keysym  
+    default: Left
+
+    Keysym of prev key.
+    For example, Page_Up.
+
+  * `-nk` <str>:
+    resource: alttab.nextkey.keysym  
+    default: Right
+
+    Keysym of next key.
+    For example, Page_Down.
+
   * `-bk` <str>:
     resource: alttab.backscroll.keysym  
     default: any Shift, according to ShiftMask

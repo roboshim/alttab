@@ -465,6 +465,24 @@ int grabAllKeys(bool grabUngrab)
     return 1;
 }
 
+int grabNextPrevKeys(bool grabUngrab)
+{
+    g.ignored_modmask = getOffendingModifiersMask(dpy); // or 0 for g.debug
+    char *grabhint =
+        "Error while (un)grabbing key 0x%x with mask 0x%x/0x%x.\nProbably other program already grabbed this combination.\n";
+    if (!changeKeygrab
+        (root, grabUngrab, g.option_prevCode, g.option_modMask,
+         g.ignored_modmask)) {
+        die(grabhint, g.option_prevCode, g.option_modMask, g.ignored_modmask);
+    }
+    if (!changeKeygrab
+        (root, grabUngrab, g.option_nextCode, g.option_modMask,
+         g.ignored_modmask)) {
+        die(grabhint, g.option_nextCode, g.option_modMask, g.ignored_modmask);
+    }
+    return 1;
+}
+
 int main(int argc, char **argv)
 {
 

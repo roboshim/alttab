@@ -188,6 +188,8 @@ typedef struct {
 //    SwitchMoment last; // for detecting false focus events from WM
 } Globals;
 
+int grabNextPrevKeys(bool grabUngrab);
+
 // gui
 int startupGUItasks();
 int uiShow(bool direction);

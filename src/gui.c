@@ -617,6 +617,7 @@ int uiHide()
 {
     // order is important: to set focus in Metacity,
     // our window must be destroyed first
+    grabNextPrevKeys(false);
     if (uiwin) {
         msg(0, "destroying our window\n");
         XUnmapWindow(dpy, uiwin);

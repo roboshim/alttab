@@ -55,6 +55,8 @@ along with alttab.  If not, see <http://www.gnu.org/licenses/>.
 #define DEFBACKMASK ShiftMask
 #define DEFMODKS    XK_Alt_L
 #define DEFKEYKS    XK_Tab
+#define DEFRMODKS   XK_VoidSymbol
+#define DEFRMODMASK 0
 
 #include "icon.h"
 

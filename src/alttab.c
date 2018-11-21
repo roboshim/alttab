@@ -529,6 +529,7 @@ int main(int argc, char **argv)
                   && ev.xkey.keycode == g.option_keyCode)) {
                 break;
             }                   // safety redundance
+            activeState = ev.xkey.state;
             if (!g.uiShowHasRun) {
                 uiShow((ev.xkey.state & g.option_backMask));
             } else {

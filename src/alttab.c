@@ -508,7 +508,7 @@ int main(int argc, char **argv)
         if (g.uiShowHasRun) {
             // poll: lag and consume cpu, but necessary because of bug #1 and #2
             XQueryKeymap(dpy, keys_pressed);
-            if (!(keys_pressed[octet] & kmask)) {   // Alt released
+            if (!(((activeState & g.option_modMask) && (keys_pressed[octet] & kmask)) || ((activeState & g.option_rModMask) && (keys_pressed[roctet] & rkmask)))) {   // main modifier or revmodifier released
                 uiHide();
                 continue;
             }

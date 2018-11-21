@@ -294,6 +294,10 @@ int use_args_and_xrm(int *argc, char **argv)
         break;
     }
 
+    RMM = keycode_to_modmask(RMC);
+    if (RMM == 0)
+        die(rmb, RMC);
+
     msg(0, "modMask %d, backMask %d, modCode %d, keyCode %d\n",
         GMM, GBM, MC, KC);
 

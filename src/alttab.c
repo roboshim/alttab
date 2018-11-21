@@ -533,7 +533,7 @@ int main(int argc, char **argv)
             if (!g.uiShowHasRun) {
                 uiShow((ev.xkey.state & ( g.option_backMask | g.option_rModMask )));
             } else {
-                if (ev.xkey.state & g.option_backMask) {
+                if (ev.xkey.state & ( g.option_backMask | g.option_rModMask )) {
                     uiPrevWindow();
                 } else {
                     uiNextWindow();

@@ -300,6 +300,8 @@ int use_args_and_xrm(int *argc, char **argv)
 
     msg(0, "modMask %d, backMask %d, modCode %d, keyCode %d\n",
         GMM, GBM, MC, KC);
+    msg(0, "rModMask %d, rModCode %d\n",
+        RMM, RMC);
 
     g.option_tileW = DEFTILEW;
     g.option_tileH = DEFTILEH;

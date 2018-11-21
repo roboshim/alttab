@@ -531,7 +531,7 @@ int main(int argc, char **argv)
             }                   // safety redundance
             activeState = ev.xkey.state;
             if (!g.uiShowHasRun) {
-                uiShow((ev.xkey.state & g.option_backMask));
+                uiShow((ev.xkey.state & ( g.option_backMask | g.option_rModMask )));
             } else {
                 if (ev.xkey.state & g.option_backMask) {
                     uiPrevWindow();

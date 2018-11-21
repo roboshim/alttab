@@ -241,6 +241,8 @@ int use_args_and_xrm(int *argc, char **argv)
 #define  KC  g.option_keyCode
 #define  GMM  g.option_modMask
 #define  GBM  g.option_backMask
+#define  RMC  g.option_rModCode
+#define  RMM  g.option_rModMask
 
     ksi = ksym_option_to_keycode(&db, XRMAPPNAME, "modifier", &errmsg);
     if (ksi == -1)

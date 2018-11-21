@@ -525,7 +525,7 @@ int main(int argc, char **argv)
         case KeyPress:
             msg(1, "Press %lx: %d-%d\n",
                 ev.xkey.window, ev.xkey.state, ev.xkey.keycode);
-            if (!((ev.xkey.state & g.option_modMask)
+            if (!((ev.xkey.state & ( g.option_modMask | g.option_rModMask ))
                   && ev.xkey.keycode == g.option_keyCode)) {
                 break;
             }                   // safety redundance

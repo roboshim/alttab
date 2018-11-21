@@ -107,6 +107,7 @@ int use_args_and_xrm(int *argc, char **argv)
         {"-mk", "*modifier.keysym", XrmoptionSepArg, NULL},
         {"-kk", "*key.keysym", XrmoptionSepArg, NULL},
         {"-bk", "*backscroll.keysym", XrmoptionSepArg, NULL},
+        {"-rk", "*revmodifier.keysym", XrmoptionSepArg, NULL},
         {"-t", "*tile.geometry", XrmoptionSepArg, NULL},
         {"-i", "*icon.geometry", XrmoptionSepArg, NULL},
         {"-vp", "*viewport", XrmoptionSepArg, NULL},

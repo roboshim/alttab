@@ -249,6 +249,11 @@ int use_args_and_xrm(int *argc, char **argv)
         die("%s\n", errmsg);
     MC = ksi != 0 ? ksi : XKeysymToKeycode(dpy, DEFMODKS);
 
+    ksi = ksym_option_to_keycode(&db, XRMAPPNAME, "revmodifier", &errmsg);
+    if (ksi == -1)
+        die("%s\n", errmsg);
+    RMC = ksi != 0 ? ksi : XKeysymToKeycode(dpy, DEFRMODKS);
+
     ksi = ksym_option_to_keycode(&db, XRMAPPNAME, "key", &errmsg);
     if (ksi == -1)
         die("%s\n", errmsg);

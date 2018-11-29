@@ -19,6 +19,9 @@
 ! Ctrl-Tab instead of Alt-Tab
 !alttab.modifier.keysym: Control_L
 
+! use Control-Tab for revert
+!alttab.revmodifier.keysym: Control_L
+
 ! Ctrl instead of Shift for backscroll
 !alttab.backscroll.keysym: Control_L
 

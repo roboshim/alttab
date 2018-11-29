@@ -318,6 +318,8 @@ int use_args_and_xrm(int *argc, char **argv)
         GMM, GBM, MC, KC);
     msg(0, "prevCode %d, nextCode %d\n",
         PKC, NKC);
+    msg(0, "rModMask %d, rModCode %d\n",
+        RMM, RMC);
 
     g.option_tileW = DEFTILEW;
     g.option_tileH = DEFTILEH;

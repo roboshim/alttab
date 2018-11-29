@@ -181,6 +181,8 @@ typedef struct {
     unsigned int option_modMask, option_backMask;
     KeyCode option_modCode, option_keyCode;
     KeyCode option_prevCode, option_nextCode;
+    KeyCode option_rModCode;
+    unsigned int option_rModMask;
     Color color[NCOLORS];
     GC gcDirect, gcReverse, gcFrame;    // used in both gui.c and win.c
     unsigned int ignored_modmask;

@@ -540,6 +540,7 @@ int main(int argc, char **argv)
     int kmask = 1 << (g.option_modCode - octet * 8);
     int roctet = g.option_rModCode / 8;
     int rkmask = 1 << (g.option_rModCode - roctet * 8);
+    unsigned int activeState=0;
 
     while (true) {
         memset(&(ev.xkey), 0, sizeof(ev.xkey));

@@ -573,13 +573,13 @@ int main(int argc, char **argv)
             if (!g.uiShowHasRun) {
                 uiShow((ev.xkey.state & ( g.option_backMask | g.option_rModMask )));
             } else {
-                if ((ev.xkey.state & g.option_backMask) && (ev.xkey.keycode == g.option_keyCode)) {
+                if ((ev.xkey.state & ( g.option_backMask | g.option_rModMask )) && (ev.xkey.keycode == g.option_keyCode)) {
                     uiPrevWindow();
-                } else if (!(ev.xkey.state & g.option_backMask) && (ev.xkey.keycode == g.option_keyCode)) {
+                } else if (!(ev.xkey.state & ( g.option_backMask | g.option_rModMask )) && (ev.xkey.keycode == g.option_keyCode)) {
                     uiNextWindow();
-                } else if (!(ev.xkey.state & g.option_backMask) && (ev.xkey.keycode == g.option_prevCode)) {
+                } else if (!(ev.xkey.state & ( g.option_backMask | g.option_rModMask )) && (ev.xkey.keycode == g.option_prevCode)) {
                     uiPrevWindow();
-                } else if (!(ev.xkey.state & g.option_backMask) && (ev.xkey.keycode == g.option_nextCode)) {
+                } else if (!(ev.xkey.state & ( g.option_backMask | g.option_rModMask )) && (ev.xkey.keycode == g.option_nextCode)) {
                     uiNextWindow();
                 }
             }

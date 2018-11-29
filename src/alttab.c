@@ -55,6 +55,7 @@ Options:\n\
    -bk str    keysym of backscroll modifier\n\
    -pk str    keysym of prev key\n\
    -nk str    keysym of next key\n\
+   -rk str    keysym of revert modifier\n\
    -mm N      (obsoleted) main modifier mask\n\
    -bm N      (obsoleted) backward scroll modifier mask\n\
     -t NxM    tile geometry\n\

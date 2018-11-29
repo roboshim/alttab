@@ -477,6 +477,11 @@ int grabAllKeys(bool grabUngrab)
         die(grabhint, g.option_keyCode,
             g.option_modMask | g.option_backMask, g.ignored_modmask);
     }
+    if (!changeKeygrab
+        (root, grabUngrab, g.option_keyCode, g.option_rModMask,
+         g.ignored_modmask)) {
+        die(grabhint, g.option_keyCode, g.option_rModMask, g.ignored_modmask);
+    }
     return 1;
 }
 
